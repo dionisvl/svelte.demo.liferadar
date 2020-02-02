@@ -1,12 +1,8 @@
-*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
-
----
-
-# svelte full life demo
+# Svelte demo. Liferadar
 Полная жизнь на Svelte
+https://habr.com/ru/post/458974/
 
-
-
+![](readme.gif)
 
 ## Get started
 
