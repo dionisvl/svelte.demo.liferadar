@@ -1,30 +1,28 @@
 <script>
-	export let name;
+	import Radar from './Radar.svelte' /* импортируем наш компонент */
 </script>
-
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+	:global(body) {
+		height: 100%;
+		overscroll-behavior: none; /* отключает pull to refresh*/
+		user-select: none; /* Отключает выделение в тач интерфейсах */
+		margin: 0;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+		background: rgb(35, 41, 37);
 	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	:global(html) {
+		height: 100%;
 	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	.container {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
 	}
 </style>
+
+<div class="container">
+	<Radar/> <!-- отрисовываем компонент Radar -->
+</div>
